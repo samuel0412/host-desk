@@ -57,3 +57,49 @@
 .file-input span img {
   margin-right: 10px;
 }
+.data-protect h4 {
+  color: #d1cc00;
+  font-size: 20px;
+  font-weight: 700;
+}
+.data-protect p {
+  color: #1c1c13;
+  font-size: 17px;
+}
+.data-protect label {
+  color: #1c1c13;
+  font-size: 17px;
+  font-weight: 400;
+  margin-left: 10px;
+}
+.check-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 22px 0px;
+}
+.check-section label span {
+  color: #d1cc00;
+}
+.check-section-two {
+  border-top: 1px solid #1c1c13;
+  border-bottom: 1px solid #1c1c13;
+}
+.check-section img {
+  margin: 0px 0px 0px 85px;
+}
+.check-section .form-check-input {
+  border: 2px solid #1c1b1f;
+  border-radius: 0px;
+  width: 18px;
+  height: 18px;
+}
+.check-section .form-check-input:focus {
+  box-shadow: none;
+}
+.login-content .input-group-text {
+  background-color: #d1cc00;
+  width: 168px;
+  justify-content: center;
+  font-size: 18px;
+}

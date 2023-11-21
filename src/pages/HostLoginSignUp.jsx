@@ -1,6 +1,15 @@
 import React from "react";
-import { LogInBg, UploadImg } from "../assets/images";
-import { Col, Container, Row, Tab, Tabs, Form } from "react-bootstrap";
+import { ArrowImg, BackImg, LogInBg, UploadImg } from "../assets/images";
+import {
+  Col,
+  Container,
+  Row,
+  Tab,
+  Tabs,
+  Form,
+  Button,
+  InputGroup,
+} from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const HostLoginSignUp = () => {
@@ -132,7 +141,7 @@ const HostLoginSignUp = () => {
                               </Form>
                             </Col>
                             <Col sm="12">
-                              <button className="submit">Continue</button>
+                              <Button className="submit">Continue</Button>
                             </Col>
                           </Row>
                           <Row className="mt-5">
@@ -172,7 +181,106 @@ const HostLoginSignUp = () => {
                               </Form.Group>
                             </Col>
                             <Col sm="12">
-                              <button className="submit">Continue</button>
+                              <Button className="submit">Continue</Button>
+                            </Col>
+                          </Row>
+                          <Row className="mt-5">
+                            <Col sm="12">
+                              <div className="data-protect">
+                                <h4>Your Data Protection</h4>
+                                <p>
+                                  General Data Protection Regulation (GDPR) puts
+                                  you in change of your personal data.Select the
+                                  below to confirm how <span>Hotdesknow </span>
+                                  can use your data.
+                                </p>
+                                <div className="check-section">
+                                  <Form.Check
+                                    type="checkbox"
+                                    label="*Acceptance of the Terms and conditions and the Privacy Policy "
+                                  />
+                                  <img src={ArrowImg} alt="" />
+                                </div>
+                                <div className="check-section check-section-two">
+                                  <Form.Check type="checkbox" />
+                                  <label>
+                                    I agree to <span>Hotdesknow</span> using my
+                                    personal data to send me offers and other
+                                    materials
+                                  </label>
+                                  <img src={ArrowImg} alt="" />
+                                </div>
+                                <div className="check-section">
+                                  <label>
+                                    By choosing to continue, I am agreeing to
+                                    <span> Hotdesknow </span> processing my
+                                    personal data{" "}
+                                  </label>
+                                  <img src={ArrowImg} alt="" />
+                                </div>
+                              </div>
+                            </Col>
+                            <Col sm="12">
+                              <div className="d-flex align-items-center justify-content-center mt-5">
+                                <Button className="back">
+                                  <img src={BackImg} alt="" />
+                                </Button>
+                                <Button className="submit">Continue</Button>
+                              </div>
+                            </Col>
+                          </Row>
+                          <Row className="mt-5">
+                            <Col sm="12">
+                              <div className="data-protect">
+                                <h4>Your Address</h4>
+                                <p>Where can customers find you?</p>
+                              </div>
+                            </Col>
+                            <Col sm="12">
+                              <InputGroup className="mb-4">
+                                <Form.Control
+                                  placeholder="Enter location"
+                                  aria-label="Recipient's username"
+                                  aria-describedby="basic-addon2"
+                                />
+                                <InputGroup.Text id="basic-addon2">
+                                  Search
+                                </InputGroup.Text>
+                              </InputGroup>
+                            </Col>
+                            <Col sm="12">
+                              <Form.Group className="mb-4">
+                                <Form.Select
+                                  aria-label="Default select example"
+                                  className="form-control"
+                                >
+                                  <option>Enter location</option>
+                                  <option value="1">One</option>
+                                  <option value="2">Two</option>
+                                  <option value="3">Three</option>
+                                </Form.Select>
+                              </Form.Group>
+                            </Col>
+                            <Col sm="12">
+                              <div className="d-flex align-items-center justify-content-center mt-5">
+                                <Button className="back">
+                                  <img src={BackImg} alt="" />
+                                </Button>
+                                <Button className="submit">Continue</Button>
+                              </div>
+                            </Col>
+                          </Row>
+                          <Row className="mt-5">
+                            <Col sm="12">
+                              <div className="data-protect">
+                                <h4>Opening time</h4>
+                                <p>Select what times you are open</p>
+                              </div>
+                            </Col>
+                            <Col sm="12">
+                              <div className="d-flex align-items-center justify-content-center mt-5">
+                                <Button className="submit">Continue</Button>
+                              </div>
                             </Col>
                           </Row>
                         </Col>

@@ -22,7 +22,7 @@
 }
 .login-main {
   width: 100%;
-  padding: 80px 160px;
+  padding: 80px 180px;
   background: #f9f9f9;
 }
 .login-content .nav-tabs .nav-link {
@@ -80,8 +80,6 @@
   height: 60px;
   font-size: 20px;
   letter-spacing: -0.2px;
-  margin: 45px auto 20px;
-  display: table;
   border-radius: 10px;
   border: none;
 }
@@ -95,4 +93,13 @@
   color: var(--secondaryColor);
   border-bottom: 2px solid var(--borderColor);
   padding-bottom: 4px;
+}
+.login-content button.back {
+  width: 80px;
+  height: 60px;
+  margin-right: 18px;
+  letter-spacing: -0.2px;
+  border-radius: 10px;
+  border: none;
+  background-color: #1c1c13;
 }

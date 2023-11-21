@@ -5,6 +5,8 @@ import hostImgAvatar from "./hostProfile.svg";
 import hostDashboardIcon from "./hostSidebaricon/dashboardIcon.svg";
 import hostBusinessInfoIcon from "./hostSidebaricon/businessInfo.svg";
 import hostDownArrowIcon from "./hostSidebaricon/downArrow.png";
+import ArrowImg from "./arrow.png";
+import BackImg from "./back.png";
 
 export {
   Logo,
@@ -14,4 +16,6 @@ export {
   hostDashboardIcon,
   hostBusinessInfoIcon,
   hostDownArrowIcon,
+  ArrowImg,
+  BackImg,
 };
