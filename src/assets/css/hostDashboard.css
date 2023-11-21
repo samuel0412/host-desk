@@ -1,0 +1,40 @@
+.wrapper {
+  width: 100%;
+  display: flex;
+}
+.mainSecSidebar {
+  padding: 10px;
+}
+.mainSecSidebar ul li {
+  line-height: 3;
+}
+.mainSecSidebar ul li a {
+  text-decoration: none !important;
+  font-weight: 400;
+  color: var(--primaryFontColor);
+}
+.hostSideBar {
+  width: 15%;
+  height: 100vh;
+  background: var(--colorWhite);
+}
+.profileSec {
+  display: flex;
+  align-items: center;
+}
+
+.hostNameSec p {
+  padding: 0;
+  margin: 0;
+}
+.hostName {
+  font-size: 18px;
+  font-weight: 700;
+}
+.sidebarLinkSec {
+  margin-top: 25px;
+}
+.hostMenuIcon img {
+  width: 20px;
+  height: 20px;
+}

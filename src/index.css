@@ -1,8 +1,18 @@
 body {
   margin: 0;
   padding: 0px;
-  font-family: "Lato", sans-serif;
+  font-family: "Lato", sans-serif !important;
+  background: #f9f9f9 !important;
 }
+
 * {
   box-sizing: border-box;
+}
+ul li {
+  list-style: none;
+}
+.subMenuHostSec img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
 }
