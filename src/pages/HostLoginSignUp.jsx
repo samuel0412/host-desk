@@ -1,5 +1,5 @@
 import React from "react";
-import { LogInBg, UploadImg } from "../images";
+import { LogInBg, UploadImg } from "../assets/images";
 import { Col, Container, Row, Tab, Tabs, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { LogInBg, Logo } from "../images";
+import { LogInBg, Logo } from "../assets/images";
 import { Col, Container, Row, Tab, Tabs, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
 

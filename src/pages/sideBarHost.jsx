@@ -5,7 +5,7 @@ import {
   hostDashboardIcon,
   hostDownArrowIcon,
   hostImgAvatar,
-} from "../images";
+} from "../assets/images";
 
 export default function SideBarHost() {
   const [toggleSubmenuHost, setToggleSubmenuHost] = useState(false);
