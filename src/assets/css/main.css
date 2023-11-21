@@ -1,0 +1,8 @@
+@import url("./hostDashboard.css");
+
+:root {
+  --colorWhite: #ffffff;
+  --layoutBgColor: #f9f9f9;
+  --primaryFontColor: #1c1c13;
+  --secondaryColor: #d1cc00;
+}
