@@ -1,8 +1,11 @@
 @import url("./hostDashboard.css");
+@import url("./loginSignup.css");
 
 :root {
   --colorWhite: #ffffff;
   --layoutBgColor: #f9f9f9;
   --primaryFontColor: #1c1c13;
   --secondaryColor: #d1cc00;
+  --placeHolderColor: #6b7280;
+  --borderColor: #7e7e7e;
 }
