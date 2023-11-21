@@ -1,5 +1,6 @@
 @import url("./hostDashboard.css");
 @import url("./loginSignup.css");
+@import url("./hostLoginSignUp.css");
 
 :root {
   --colorWhite: #ffffff;

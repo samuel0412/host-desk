@@ -3,7 +3,7 @@ import { LogInBg, Logo } from "../images";
 import { Col, Container, Row, Tab, Tabs, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-const login = () => {
+const Guestlogin = () => {
   return (
     <>
       <div className="login-bg">
@@ -79,4 +79,4 @@ const login = () => {
   );
 };
 
-export default login;
+export default Guestlogin;
