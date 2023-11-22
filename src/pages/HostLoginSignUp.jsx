@@ -1,9 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
 import { LogInBg, UploadImg } from "../assets/images";
-import { Col, Container, Row, Tab, Tabs, Form } from "react-bootstrap";
+import { Col, Container, Row, Tab, Tabs, Form, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { doLogin } from "../Redux/Actions/AuthActions";
+import { useDispatch } from "react-redux";
 
 const HostLoginSignUp = () => {
+  const dispatch = useDispatch();
+  const [loginUserData, setLoginUserData] = useState({
+    email: "",
+    password: "",
+  });
+  const [validated, setValidated] = useState(false);
+  const handleChange = (e) => {
+    let { name, value } = e.target;
+    setLoginUserData((prevState) => ({
+      ...prevState,
+      [name]: value === "",
+    }));
+
+    setLoginUserData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
+
+  const handleHostLogin = async () => {
+    let check = false;
+
+    const data = {
+      email: loginUserData.email,
+      password: loginUserData.password,
+    };
+
+    if (data.email === "" || data.password === "") {
+      setValidated(true);
+      check = true;
+    }
+    if (check === true) return;
+    dispatch(doLogin(data));
+  };
   return (
     <>
       <div className="login-bg">
@@ -29,26 +65,46 @@ const HostLoginSignUp = () => {
                     <Tab eventKey="log-in" title="Log In">
                       <Row className="mt-5">
                         <Col sm="12">
-                          <Form>
-                            <Form.Group className="mb-4">
+                          <Form noValidate validated={validated}>
+                            <Form.Group
+                              className="mb-4"
+                              controlId="validationCustom01"
+                            >
                               <Form.Label>
                                 Enter email address or phone number
                               </Form.Label>
                               <Form.Control
+                                required
                                 type="email"
                                 placeholder="Please enter"
+                                name="email"
+                                value={loginUserData.email}
+                                onChange={handleChange}
                               />
+                              <Form.Control.Feedback type="invalid">
+                                Please provide a valid email
+                              </Form.Control.Feedback>
                             </Form.Group>
                           </Form>
                         </Col>
                         <Col sm="12">
-                          <Form>
-                            <Form.Group className="mb-2">
+                          <Form noValidate validated={validated}>
+                            <Form.Group
+                              className="mb-2"
+                              controlId="validationCustom02"
+                            >
                               <Form.Label>Password</Form.Label>
                               <Form.Control
+                                required
                                 type="password"
                                 placeholder="Please enter"
+                                name="password"
+                                value={loginUserData.password}
+                                onChange={handleChange}
                               />
+                              <Form.Control.Feedback type="invalid">
+                                Please provide a valid password
+                              </Form.Control.Feedback>
                             </Form.Group>
                           </Form>
                         </Col>
@@ -56,7 +112,9 @@ const HostLoginSignUp = () => {
                           <Link to="/">Forgotten Password?</Link>
                         </Col>
                         <Col sm="12">
-                          <button className="submit">Log In</button>
+                          <Button className="submit" onClick={handleHostLogin}>
+                            Log In
+                          </Button>
                         </Col>
                         <Col sm="12">
                           <p className="is-account">

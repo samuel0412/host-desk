@@ -14,7 +14,7 @@
   color: var(--primaryFontColor);
 }
 .hostSideBar {
-  width: 15%;
+  width: 20%;
   height: 100vh;
   background: var(--colorWhite);
 }
@@ -37,4 +37,18 @@
 .hostMenuIcon img {
   width: 20px;
   height: 20px;
+}
+.logOutbtn {
+  cursor: pointer;
+}
+.sidebarLinkSec ul li {
+  cursor: pointer;
+}
+.outletSec {
+  width: 100%;
+}
+
+.sidebarLinkSec .subMenuHost .subMenuHostSec li a.active {
+  background-color: #e7e5b9;
+  padding: 12px 40px;
 }
