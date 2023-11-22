@@ -1,5 +1,5 @@
 import React from "react";
-import SideBarHost from "./sideBarHost";
+import SideBarHost from "./SideBarHost";
 import { Outlet } from "react-router-dom";
 
 export default function Layout() {
@@ -8,7 +8,7 @@ export default function Layout() {
       <div className="hostSideBar">
         <SideBarHost />
       </div>
-      <div>
+      <div className="outletSec">
         <Outlet />
       </div>
     </div>

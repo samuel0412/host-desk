@@ -1,3 +1,4 @@
+import { SignIn } from "../../services/auth";
 import {
   LOGIN_SUCCESS,
   LOGIN_LOADING,
@@ -8,7 +9,14 @@ import {
 
 const doLogin = (data) => {
   return async (dispatch, getState) => {
-    // dispatch(loadingStatus(true));
+    dispatch(loadingStatus(true));
+    const res = await SignIn(data);
+    // console.log(res);
+    dispatch({
+      type: UPDATE_AUTH_STATE,
+      data: res.data,
+    });
+    dispatch(loadingStatus(false));
   };
 };
 const LogOut = () => {

@@ -1,16 +1,23 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import { useDispatch } from "react-redux";
+
 import {
   hostBusinessInfoIcon,
   hostDashboardIcon,
   hostDownArrowIcon,
   hostImgAvatar,
 } from "../assets/images";
+import { LogOut } from "../Redux/Actions/AuthActions";
 
 export default function SideBarHost() {
+  const dispatch = useDispatch();
   const [toggleSubmenuHost, setToggleSubmenuHost] = useState(false);
   const toggleMenu = () => {
     setToggleSubmenuHost(!toggleSubmenuHost);
+  };
+  const logOutHandler = () => {
+    dispatch(LogOut());
   };
   return (
     <div className="mainSecSidebar">
@@ -48,60 +55,72 @@ export default function SideBarHost() {
             <li className="subMenuHost" id="subMenuHost">
               <ul className="subMenuHostSec">
                 <li>
-                  <span>
-                    <img src={hostBusinessInfoIcon} alt="" />
-                  </span>
-                  <span>Business details</span>
+                  <NavLink to="/business-details">
+                    <span>
+                      <img src={hostBusinessInfoIcon} alt="" />
+                    </span>
+                    <span>Business details</span>
+                  </NavLink>
                 </li>
                 <li>
-                  <span>
-                    <img src={hostBusinessInfoIcon} alt="" />
-                  </span>
-
-                  <span>Opening Hours</span>
+                  <NavLink to="/opening-hours">
+                    <span>
+                      <img src={hostBusinessInfoIcon} alt="" />
+                    </span>
+                    <span>Opening Hours</span>
+                  </NavLink>
                 </li>
                 <li>
-                  <span>
-                    <img src={hostBusinessInfoIcon} alt="" />
-                  </span>
-
-                  <span>Payment Info</span>
+                  <NavLink to="/payment-info">
+                    <span>
+                      <img src={hostBusinessInfoIcon} alt="" />
+                    </span>
+                    <span>Payment Info</span>
+                  </NavLink>
                 </li>
                 <li>
-                  <span>
-                    <img src={hostBusinessInfoIcon} alt="" />
-                  </span>
-
-                  <span>Team Members</span>
+                  <NavLink to="/team-members">
+                    <span>
+                      <img src={hostBusinessInfoIcon} alt="" />
+                    </span>
+                    <span>Team Members</span>
+                  </NavLink>
                 </li>
                 <li>
-                  <span>
-                    <img src={hostBusinessInfoIcon} alt="" />
-                  </span>
-
-                  <span>Customer List</span>
+                  <NavLink to="/customer-list">
+                    <span>
+                      <img src={hostBusinessInfoIcon} alt="" />
+                    </span>
+                    <span>Customer List</span>
+                  </NavLink>
                 </li>
                 <li>
-                  <span>
-                    {" "}
-                    <img src={hostBusinessInfoIcon} alt="" />
-                  </span>
-
-                  <span>Reservations List</span>
+                  <NavLink to="/reservation">
+                    <span>
+                      <img src={hostBusinessInfoIcon} alt="" />
+                    </span>
+                    <span>Reservations List</span>
+                  </NavLink>
                 </li>
                 <li>
-                  <span>
-                    {" "}
-                    <img src={hostBusinessInfoIcon} alt="" />
-                  </span>
-
-                  <span>Terms & Conditions</span>
+                  <NavLink to="/terms-conditions">
+                    <span>
+                      <img src={hostBusinessInfoIcon} alt="" />
+                    </span>
+                    <span>Terms & Conditions</span>
+                  </NavLink>
                 </li>
               </ul>
             </li>
           ) : (
             ""
           )}
+          <li className="d-flex gap-2" onClick={logOutHandler}>
+            <span className="hostMenuIcon">
+              <i className="fa-solid fa-arrow-right-from-bracket"></i>
+            </span>
+            <span className="logOutbtn">Logout</span>
+          </li>
         </ul>
       </div>
     </div>

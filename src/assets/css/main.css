@@ -1,6 +1,7 @@
 @import url("./hostDashboard.css");
 @import url("./loginSignup.css");
 @import url("./hostLoginSignUp.css");
+@import url("./businessDetails.css");
 
 :root {
   --colorWhite: #ffffff;
@@ -9,4 +10,6 @@
   --secondaryColor: #d1cc00;
   --placeHolderColor: #6b7280;
   --borderColor: #7e7e7e;
+  --gray3: #D9DDE4
+  --gray4: #9ca3af;
 }

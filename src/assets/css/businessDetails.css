@@ -1,0 +1,24 @@
+.cardHeaderBusinessDetailsSec {
+  padding-left: 20px;
+}
+.businessTopHeader p {
+  color: var(--gray4);
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+.businessTopHeaderTitle p {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+}
+.businessDetailsSec .form-control {
+  border: 1px solid var(--primaryFontColor);
+}
+
+.fileUploadBusinessDetails {
+  display: flex;
+  border: 1px solid #d9dde4;
+  border-radius: 4px;
+  height: 250px;
+}

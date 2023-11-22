@@ -1,56 +1,67 @@
 import axios from "axios";
-
-const env = process.env.NODE_ENV;
-
-const config = {
-  // BASE_URL: "http://192.168.1.11:8000/",
-  BASE_URL: "http://localhost:8000/",
-  // BASE_URL: "https://api.yeasitech.com/",
-};
-
-if (env === "production") {
-  config.BASE_URL = "https://api.yeasitech.com/";
-}
+import { store } from "../Redux/store";
+import endpoints from "./endpoints";
 
 const fetchClient = () => {
+  // const auth = store.getState().Auth;
   const defaultOptions = {
+    baseURL: endpoints.BASE_URL,
     headers: {
-      "Access-Control-Allow-Origin": "*",
-      "content-type": "application/json",
-      Accept: "application/json",
-      Authorization: "Bearer " + localStorage.getItem("token"),
+      // "Access-Control-Allow-Origin": "*",
+      "Content-Type": "application/json",
+      // Authorization: auth.token,
     },
   };
+  // Create instance
+  // @ts-ignore
   let instance = axios.create(defaultOptions);
+
+  // Set the AUTH token for any request
+  // instance.interceptors.request.use(function (config) {
+  //   const token = auth.token;
+  //   config.headers.Authorization = token ? `Bearer ${token}` : "";
+  //   return config;
+  // });
 
   return instance;
 };
-
-export const apiClient = {
-  put(path, params, data = "") {
-    return fetchClient(data).put(`${config.BASE_URL}${path}`, params);
+const API = {
+  get: async (path) => {
+    try {
+      return await fetchClient().get(path);
+    } catch (error) {
+      console.log("error", error);
+      throw error;
+    }
   },
-  get(path, data = "") {
-    return fetchClient(data).get(`${config.BASE_URL}${path}`);
+  post: async (path, params) => {
+    try {
+      return await fetchClient().post(path, params);
+    } catch (error) {
+      throw error;
+    }
   },
-  post(path, params, data = "") {
-    return fetchClient(data).post(
-      `${config.BASE_URL}${path}`,
-      JSON.stringify(params)
-    );
+  put: async (path, params) => {
+    try {
+      return await fetchClient().put(path, params);
+    } catch (error) {
+      throw error;
+    }
   },
-  patch(path, params, data = "") {
-    return fetchClient(data).patch(`${config.BASE_URL}${path}`, params);
+  delete: async (path) => {
+    try {
+      return await fetchClient().delete(path);
+    } catch (error) {
+      throw error;
+    }
   },
-  delete(path, data = "") {
-    return fetchClient(data).delete(`${config.BASE_URL}${path}`);
-  },
-  upload(path, params, data = "") {
-    return fetchClient(data).post(path, params, {
-      headers: {
-        "Content-Type": "multipart/form-data",
-      },
-    });
-  },
+  // upload(path: string, params: any) {
+  //   return fetchClient().post(path, params, {
+  //     headers: {
+  //       'Content-Type': 'multipart/form-data',
+  //     },
+  //   })
+  // },
 };
-export default apiClient;
+// store.subscribe(fetchClient);
+export default API;
