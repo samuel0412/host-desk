@@ -1,5 +1,11 @@
 import React from "react";
-import { ArrowImg, BackImg, LogInBg, UploadImg } from "../assets/images";
+import {
+  ArrowImg,
+  BackImg,
+  EditNotSelect,
+  LogInBg,
+  UploadImg,
+} from "../assets/images";
 import {
   Col,
   Container,
@@ -141,7 +147,9 @@ const HostLoginSignUp = () => {
                               </Form>
                             </Col>
                             <Col sm="12">
-                              <Button className="submit">Continue</Button>
+                              <div className="d-flex align-items-center justify-content-center mt-5">
+                                <Button className="submit">Continue</Button>
+                              </div>
                             </Col>
                           </Row>
                           <Row className="mt-5">
@@ -181,7 +189,9 @@ const HostLoginSignUp = () => {
                               </Form.Group>
                             </Col>
                             <Col sm="12">
-                              <Button className="submit">Continue</Button>
+                              <div className="d-flex align-items-center justify-content-center mt-5">
+                                <Button className="submit">Continue</Button>
+                              </div>
                             </Col>
                           </Row>
                           <Row className="mt-5">
@@ -275,6 +285,28 @@ const HostLoginSignUp = () => {
                               <div className="data-protect">
                                 <h4>Opening time</h4>
                                 <p>Select what times you are open</p>
+                              </div>
+                            </Col>
+                            <Col sm="12" className="mt-3">
+                              <div className="open-time-check">
+                                <div className="open-day">
+                                  <Form.Check type="checkbox" />
+                                  <label>Sunday</label>
+                                </div>
+                                <div className="open-day">
+                                  <p className="mb-0">10:00 am -7:00pm</p>
+                                  <img src={EditNotSelect} alt="" />
+                                </div>
+                              </div>
+                              <div className="open-time">
+                                <div className="open-day">
+                                  <Form.Check type="checkbox" />
+                                  <label>Sunday</label>
+                                </div>
+                                <div className="open-day">
+                                  <p className="mb-0">10:00 am -7:00pm</p>
+                                  <img src={EditNotSelect} alt="" />
+                                </div>
                               </div>
                             </Col>
                             <Col sm="12">

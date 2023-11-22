@@ -7,6 +7,8 @@ import hostBusinessInfoIcon from "./hostSidebaricon/businessInfo.svg";
 import hostDownArrowIcon from "./hostSidebaricon/downArrow.png";
 import ArrowImg from "./arrow.png";
 import BackImg from "./back.png";
+import EditSelect from "./edit-selected.png";
+import EditNotSelect from "./edit-not-selected.png";
 
 export {
   Logo,
@@ -18,4 +20,6 @@ export {
   hostDownArrowIcon,
   ArrowImg,
   BackImg,
+  EditSelect,
+  EditNotSelect,
 };

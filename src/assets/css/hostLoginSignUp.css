@@ -103,3 +103,49 @@
   justify-content: center;
   font-size: 18px;
 }
+.open-time {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #d9dde4;
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+.open-day {
+  display: flex;
+  align-items: center;
+}
+.open-time label {
+  color: #d9dde4;
+  font-size: 18px;
+}
+.open-time .form-check-input {
+  margin-right: 10px;
+}
+.open-time .form-check-input:focus {
+  box-shadow: none;
+}
+.open-time p {
+  margin-right: 23px;
+}
+.open-time-check {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #d1cc00;
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+.open-time-check label {
+  color: #d1cc00;
+  font-size: 18px;
+}
+.open-time-check .form-check-input {
+  margin-right: 10px;
+}
+.open-time-check .form-check-input:focus {
+  box-shadow: none;
+}
+.open-time-check p {
+  margin-right: 23px;
+}
